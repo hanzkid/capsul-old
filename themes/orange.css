@@ -84,6 +84,59 @@ button:hover {
   }
 
 form input::placeholder {
-  color: white;
+  color: black;
   opacity: 0.5;
+}
+
+.spotify {
+  filter: none;
+}
+.headline-button {
+  background: black;
+  color: #FC5A1A;
+}
+.cart p{
+  color: white;
+}
+.cart div{
+  color: white;
+}
+
+.cart input {
+  border-top: solid 1px white!important;
+  border-bottom: solid 1px white!important;
+  color: white!important;
+}
+.checkout {
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+  color: black!important;
+}
+.collection-desc a{
+  color: black!important;
+}
+.collection-desc {
+  border-bottom: solid 1px black!important;
+}
+
+.detail-description .size {
+  border: solid 2px black;
+}
+.detail-description input[type=radio]:checked + label {
+  color: #FC5A1A;
+  background: black;
+}
+
+#input-number, #input-number-decrement, #input-number-increment {
+  border: solid 2px black;
+  color: black;
+}
+#input-number-decrement {
+  border-right: none
+}
+#input-number-increment {
+  border-left: none
+}
+.add-to-cart {
+  color: #FC5A1A;
+  background: black;
 }

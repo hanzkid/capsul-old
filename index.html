@@ -49,7 +49,7 @@
                     <circle cx="11.8563" cy="4.67833" r="3.67833" class="cls-2" stroke-width="2"/>
                 </svg>
             </a>
-            <a href="#" style="text-decoration: none;">
+            <a href="#" style="text-decoration: none;" id="cart">
                 <svg class="nav-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.76636 6.42859H18.0521V16C18.0521 18.2092 16.2612 20 14.0521 20H5.76636C3.55722 20 1.76636 18.2092 1.76636 16V6.42859Z" class="cls-2" stroke-width="2"/>
                     <path d="M5.34009 6.33204C5.34009 6.33204 5.34009 1 10.0797 1C14.8193 1 14.8193 6.33204 14.8193 6.33204" class="cls-2" stroke-width="2"/>
@@ -61,6 +61,57 @@
             </svg>
         </div>
     </nav>
+
+    <div class="cart">
+        <div>
+            <p>Cart<span>(2)</span></p>
+            <img src="img/close.svg" class="close-cart">
+        </div>
+        <div class="cart-product-container">
+            <div class="cart-product">
+                <img src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
+                <div class="cart-description">
+                    <div class="cart-name">L/S Military Green Visionary Print Tshirt</div>
+                    <div class="cart-price">Rp. 599.000</div>
+                    <div class="cart-size">Size : XL</div>
+                    <div class="cart-cta">
+                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="1" max="10"><span class="input-number-increment">+</span>
+                        <div class="cart-remove">Remove</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product">
+                <img src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
+                <div class="cart-description">
+                    <div class="cart-name">L/S Military Green Visionary</div>
+                    <div class="cart-price">Rp. 599.000</div>
+                    <div class="cart-size">Size : XL</div>
+                    <div class="cart-cta">
+                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="1" max="10"><span class="input-number-increment">+</span>
+                        <div class="cart-remove">Remove</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product">
+                <img src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
+                <div class="cart-description">
+                    <div class="cart-name">L/S Military Green Visionary</div>
+                    <div class="cart-price">Rp. 599.000</div>
+                    <div class="cart-size">Size : XL</div>
+                    <div class="cart-cta">
+                        <span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="1" max="10"><span class="input-number-increment">+</span>
+                        <div class="cart-remove">Remove</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-total">
+            Total :
+            <p>Rp. 1.999.000</p>
+        </div>
+        <div class="checkout">Proceed To Checkout</div>
+    </div>
 
     <canvas id="noise" class="noise"></canvas>
 
@@ -91,15 +142,15 @@
     <div class="accessories-container">
         <div class="accessories">
             <svg width="55" height="43" viewBox="0 0 55 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="27.5" cy="21.5" r="5" stroke="white" stroke-width="3"/>
-                <rect x="26" y="10" width="3" height="6" fill="white"/>
-                <rect x="26" y="27" width="3" height="6" fill="white"/>
-                <rect x="39" y="20" width="3" height="6" transform="rotate(90 39 20)" fill="white"/>
-                <rect x="22" y="20" width="3" height="6" transform="rotate(90 22 20)" fill="white"/>
-                <path d="M41 4H51V20" stroke="white" stroke-width="3"/>
-                <path d="M41 39H51V20" stroke="white" stroke-width="3"/>
-                <path d="M14 4H4V20" stroke="white" stroke-width="3"/>
-                <path d="M14 39H4V20" stroke="white" stroke-width="3"/>
+                <circle class="cls-2" cx="27.5" cy="21.5" r="5" stroke="white" stroke-width="3"/>
+                <rect class="cls-1" x="26" y="10" width="3" height="6" fill="white"/>
+                <rect class="cls-1" x="26" y="27" width="3" height="6" fill="white"/>
+                <rect class="cls-1" x="39" y="20" width="3" height="6" transform="rotate(90 39 20)" fill="white"/>
+                <rect class="cls-1" x="22" y="20" width="3" height="6" transform="rotate(90 22 20)" fill="white"/>
+                <path class="cls-2" d="M41 4H51V20" stroke="white" stroke-width="3"/>
+                <path class="cls-2" d="M41 39H51V20" stroke="white" stroke-width="3"/>
+                <path class="cls-2" d="M14 4H4V20" stroke="white" stroke-width="3"/>
+                <path class="cls-2" d="M14 39H4V20" stroke="white" stroke-width="3"/>
             </svg>
             <div class="accessories-desc">00.0000 N, 00.0000 S<br/>Initiating...</div>
         </div>
@@ -109,8 +160,8 @@
         <div class="accessories spotify">
             <div class="accessories-desc">Open Playlist</div>
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 15.7271C17.527 14.3754 19.999 11.438 19.999 7.86355C19.999 4.28913 17.527 1.35166 14 0V1.74746C16.387 2.95844 17.999 5.28343 17.999 7.86355C17.999 10.4437 16.387 12.7687 14 13.9796V15.7271Z" fill="white"/>
-                    <path d="M14 3.49447V12.2318C15.225 11.2707 16 9.41051 16 7.86313C16 6.31575 15.225 4.45558 14 3.49447ZM2 12.2318H4.697L10.445 15.5799C10.5958 15.6674 10.7708 15.7177 10.9516 15.7254C11.1324 15.733 11.3122 15.6979 11.472 15.6236C11.6316 15.5489 11.765 15.4378 11.858 15.3021C11.951 15.1664 12.0001 15.0112 12 14.853V0.87328C11.9999 0.715235 11.9508 0.560173 11.8578 0.424607C11.7648 0.289041 11.6315 0.178049 11.472 0.103452C11.3125 0.0288546 11.1329 -0.00655361 10.9522 0.000998211C10.7715 0.00855003 10.5966 0.058779 10.446 0.146336L4.697 3.49447H2C0.897 3.49447 0 4.27821 0 5.24193V10.4843C0 11.448 0.897 12.2318 2 12.2318ZM2 5.24193H5C5.033 5.24193 5.061 5.22796 5.093 5.22533C5.22601 5.21348 5.35509 5.17905 5.473 5.12398C5.499 5.11088 5.53 5.10913 5.555 5.09515L10 2.50541V13.2208L5.555 10.6311C5.53 10.6163 5.499 10.6136 5.473 10.6023C5.35491 10.5461 5.22491 10.5116 5.091 10.5009C5.059 10.4983 5.032 10.4843 5 10.4843H2V5.24193Z" fill="white"/>
+                    <path d="M14 15.7271C17.527 14.3754 19.999 11.438 19.999 7.86355C19.999 4.28913 17.527 1.35166 14 0V1.74746C16.387 2.95844 17.999 5.28343 17.999 7.86355C17.999 10.4437 16.387 12.7687 14 13.9796V15.7271Z" fill="white" class="cls-1"/>
+                    <path class="cls-1" d="M14 3.49447V12.2318C15.225 11.2707 16 9.41051 16 7.86313C16 6.31575 15.225 4.45558 14 3.49447ZM2 12.2318H4.697L10.445 15.5799C10.5958 15.6674 10.7708 15.7177 10.9516 15.7254C11.1324 15.733 11.3122 15.6979 11.472 15.6236C11.6316 15.5489 11.765 15.4378 11.858 15.3021C11.951 15.1664 12.0001 15.0112 12 14.853V0.87328C11.9999 0.715235 11.9508 0.560173 11.8578 0.424607C11.7648 0.289041 11.6315 0.178049 11.472 0.103452C11.3125 0.0288546 11.1329 -0.00655361 10.9522 0.000998211C10.7715 0.00855003 10.5966 0.058779 10.446 0.146336L4.697 3.49447H2C0.897 3.49447 0 4.27821 0 5.24193V10.4843C0 11.448 0.897 12.2318 2 12.2318ZM2 5.24193H5C5.033 5.24193 5.061 5.22796 5.093 5.22533C5.22601 5.21348 5.35509 5.17905 5.473 5.12398C5.499 5.11088 5.53 5.10913 5.555 5.09515L10 2.50541V13.2208L5.555 10.6311C5.53 10.6163 5.499 10.6136 5.473 10.6023C5.35491 10.5461 5.22491 10.5116 5.091 10.5009C5.059 10.4983 5.032 10.4843 5 10.4843H2V5.24193Z" fill="white"/>
                 </svg>
         </div>
     </div>
@@ -134,8 +185,8 @@
             <h1>AVAILABLE NOW</h1>
             <div class="product-container">
                 <div class="second-justifying">
-                    <a href="detail.html">
-                        <div class="product">
+                    <div class="product">
+                        <a href="detail.html">
                             <div class="img-container">
                                 <img src="product/Product 1/Clothes/LS-Black-Visionary-Front.png">
                                 <img class="with-model" src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
@@ -145,10 +196,10 @@
                                 <!--<div class="price">Rp. 599.000</div>
                                 <a href="detail.html" class="see">See Product ></a>-->
                             </div>
-                        </div>
-                    </a>
-                    <a href="detail.html">
-                        <div class="product">
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="detail.html">
                             <div class="img-container">
                                 <img src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Back.png">
                                 <img class="with-model" src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Front.png">
@@ -158,10 +209,10 @@
                                 <!--<div class="price">Rp. 599.000</div>
                                 <a href="detail.html" class="see">See Product ></a>-->
                             </div>
-                        </div>
-                    </a>
-                    <a href="detail.html">
-                        <div class="product">
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="detail.html">
                             <div class="img-container">
                                 <img src="product/Product 3/Clothes/LS-Green-Visionary-Back.png">
                                 <img class="with-model" src="product/Product 3/Clothes/LS-Green-Visionary-Front.png">
@@ -171,66 +222,64 @@
                                 <!--<div class="price">Rp. 599.000</div>
                                 <a href="detail.html" class="see">See Product ></a>-->
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <a href="collection.html"><div class="product-more"><p>See All ></p></div></a>
-            </div>
-            
-            <h1 style="margin-top: 100px; margin-bottom: 50px;">COLLECTIONS</h1>
-            <div class="justifying">
-                <a href="detail.html">
-                    <div class="product-wide">
-                        <div class="img-container">
-                            <img src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Back.png">
-                            <img class="with-model" src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Front.png">
-                        </div>
-                        <div class="desc">
-                            <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
-                            <div style="display: none;">
-                                <div class="price">Rp. 599.000</div>
-                                <a href="detail.html" class="see">See Product ></a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <div class="product-wide">
-                        <div class="img-container">
-                            <img src="product/Product 3/Clothes/LS-Green-Visionary-Back.png">
-                            <img class="with-model" src="product/Product 3/Clothes/LS-Green-Visionary-Front.png">
-                        </div>
-                        <div class="desc">
-                            <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
-                            <div style="display: none;">
-                                <div class="price">Rp. 599.000</div>
-                                <a href="detail.html" class="see">See Product ></a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="detail.html">
-                    <div class="product-wide">
-                        <div class="img-container">
-                            <img src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
-                            <img class="with-model" src="product/Product 1/Clothes/LS-Black-Visionary-Front.png">
-                        </div>
-                        <div class="desc">
-                            <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
-                            <div style="display: none;">
-                                <div class="price">Rp. 599.000</div>
-                                <a href="detail.html" class="see">See Product ></a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <a href="allproducts.html"><div class="product-more"><p>See All ></p></div></a>
             </div>
         </div>
-
-
+            
+        <h1 style="margin-top: 100px; margin-bottom: 50px;">COLLECTIONS</h1>
+        <div class="justifying">
+            <a href="detail.html">
+                <div class="product-wide">
+                    <div class="img-container">
+                        <img src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Back.png">
+                        <img class="with-model" src="product/Product 2/Clothes/LS-Ice-Galaxy-Tie-Dye-Front.png">
+                    </div>
+                    <div class="desc">
+                        <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
+                        <div style="display: none;">
+                            <div class="price">Rp. 599.000</div>
+                            <a href="detail.html" class="see">See Product ></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="detail.html">
+                <div class="product-wide">
+                    <div class="img-container">
+                        <img src="product/Product 3/Clothes/LS-Green-Visionary-Back.png">
+                        <img class="with-model" src="product/Product 3/Clothes/LS-Green-Visionary-Front.png">
+                    </div>
+                    <div class="desc">
+                        <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
+                        <div style="display: none;">
+                            <div class="price">Rp. 599.000</div>
+                            <a href="detail.html" class="see">See Product ></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="detail.html">
+                <div class="product-wide">
+                    <div class="img-container">
+                        <img src="product/Product 1/Clothes/LS-Black-Visionary-Back.png">
+                        <img class="with-model" src="product/Product 1/Clothes/LS-Black-Visionary-Front.png">
+                    </div>
+                    <div class="desc">
+                        <div class="name" style="height: auto;">Visionary Long Sleeve T-Shirt</div>
+                        <div style="display: none;">
+                            <div class="price">Rp. 599.000</div>
+                            <a href="detail.html" class="see">See Product ></a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
 
-    <a href="product.html">
+    <a href="allproducts.html">
         <div class="marquee-container">
             <div class="marquee-scrolling">
                 COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  COLLECTION  
@@ -601,7 +650,26 @@
         <a class="country cina" href="#cina" alt="cina">
             <path d="M1182.14 253.435L1176.03 266.621L1167.6 266.242L1158.71 282.93L1166.26 291.175L1150.71 309.59L1142.72 308.439L1137.38 314.198L1138.71 317.654L1144.93 318.033L1148.04 324.171L1154.26 325.323L1173.36 346.436V357.182L1182.69 362.169L1192.91 360.638L1205.79 367.156L1221.34 370.99L1228.89 370.217L1237.33 369.444L1255.1 359.471L1260.87 360.244L1263.08 364.746L1267.98 366.004L1274.64 374.446L1270.2 382.888L1272.87 388.648L1280.42 390.952L1281.74 397.863L1290.63 398.636L1291.96 395.18L1304.84 389.421L1312.83 389.8L1322.16 398.621L1328.38 396.317L1332.38 396.696L1334.16 400.925L1337.27 401.304L1341.71 395.938L1359.47 390.179L1375.46 373.673L1380.8 357.94L1380.36 347.573L1373.69 346.421L1377.69 342.587L1376.8 336.448L1359.93 321.867V314.577L1364.8 309.212L1369.68 307.287L1370.12 303.058H1357.68L1355.46 308.817L1349.68 307.666L1342.57 301.148L1347.01 291.175L1353.23 285.416L1359.01 285.794L1358.12 294.616L1361.23 296.919L1368.78 290.402L1371.45 290.023L1370.57 285.037L1377.67 277.746L1383.01 278.125L1386.12 269.683L1389.76 268.031L1390.13 262.771L1386.59 259.589L1386.29 251.283L1393.1 250.904L1392.66 229.487L1387.88 231.943L1386.1 237.429L1378.13 237.414L1355.03 226.274L1338.35 209.026L1321.42 208.874L1317.11 212.087L1322.59 222.849L1320.68 232.943L1313.86 235.368L1310.02 235.11L1309.74 245.099L1313.73 245.872L1320.84 243.189L1330.17 247.024V250.858L1323.5 251.237L1318.17 261.21L1313.29 261.589L1295.97 281.157L1277.77 288.068L1265.33 288.841L1256.9 283.854L1244.9 289.235L1232.02 285.779L1228.91 278.489L1207.15 277.337L1195.61 261.225H1190.73L1186.81 253.753L1182.14 253.435Z" class="cls-1"/>
         </a>
-        </svg>
+    </svg>
+    <div class="accessories-desc map-gps rusia">Moscow, Rusia<br/>14.7348° N, 13.4652° E</div>
+    <div class="accessories-desc map-gps singopre">Singapore<br/>1.3521° N, 103.8198° E</div>
+    <div class="accessories-desc map-gps thailand">Bangkok, Thailand<br/>12.1812° N, 100.4696° E</div>
+    <div class="accessories-desc map-gps uae">Dubai, UAE<br/>25.2048° N, 55.2708° E</div>
+    <div class="accessories-desc map-gps indonesia">Jakarta, Indonesia<br/> 6.2088° S, 106.8456° E</div>
+    <div class="accessories-desc map-gps new-zealand">New Zealand<br/>-43.3744° S, 172.4662° E</div>
+    <div class="accessories-desc map-gps australia">Melbourne, Australia<br/>-26.4390° S, 133.2813° E</div>
+    <div class="accessories-desc map-gps japan">Tokyo, Japan<br/>35.6762° N, 139.6503° E</div>
+    <div class="accessories-desc map-gps canada">Toronto, Canada<br/>43.6510° N, -79.3470° W</div>
+    <div class="accessories-desc map-gps usa">New York, USA<br/>40.7128° N, 74.0060° W</div>
+    <div class="accessories-desc map-gps britain">London, Britain<br/>51.5074° N, 0.1278° W</div>
+    <div class="accessories-desc map-gps spain">Barcelona, Spain<br/>41.388° N, 2.1589° E</div>
+    <div class="accessories-desc map-gps french">Paris, French<br/>48.8566° N, 2.3522° E</div>
+    <div class="accessories-desc map-gps netherland">Amsterdam, Netherlands<br/>52.3702° N, 4.8951° E</div>
+    <div class="accessories-desc map-gps germany">Berlin, Germany<br/>52.5200° N, 13.4049° E</div>
+    <div class="accessories-desc map-gps italy">Milan, Italy<br/>45.4646° N, 9.1885° E</div>
+    <div class="accessories-desc map-gps taiwan">Taipei, Taiwan<br/>25.0477° N, 121.5318° E</div>
+    <div class="accessories-desc map-gps korea">Seoul, Korea<br/>37.5665° N, 126.9780° E</div>
+    <div class="accessories-desc map-gps cina">Beijing, China<br/>39.9166° N, 116.3833° E</div>
         
     <div class="footer">
         <div class="subscribe">
@@ -722,7 +790,7 @@
             }
         });
 
-        if ($(window).width() < 400) {
+        if ($(window).width() < 420) {
             $(".spotify").click(function(){
                 $(".spotify-playlist").css("right","0px");
                 $(".spotify-close").css({"left":"0px", "right":"auto"});
@@ -736,9 +804,156 @@
         }
 
         $(".spotify-close").click(function(){
-            $(".spotify-playlist").css("right","-350px");
+            $(".spotify-playlist").css("right","-365px");
             $(".spotify-close").css({"right":"-51px", "left":"auto"});
         })
+
+
+        var $circle = $('.map-gps');
+
+        function moveCircle(e) {
+            TweenLite.to($circle, 0, {
+            css: {
+            left: e.pageX,
+            top: e.pageY
+            }
+        });
+        }
+
+        $(window).on('mousemove', moveCircle);
+
+        $(".rusia").mouseenter(function(){
+            $(".rusia").addClass("show-gps");
+        });
+        $(".rusia").mouseleave(function(){
+            $(".rusia").removeClass("show-gps");
+        });
+
+        $(".singapore").mouseenter(function(){
+            $(".singapore").addClass("show-gps");
+        });
+        $(".singapore").mouseleave(function(){
+            $(".singapore").removeClass("show-gps");
+        });
+
+        $(".thailand").mouseenter(function(){
+            $(".thailand").addClass("show-gps");
+        });
+        $(".thailand").mouseleave(function(){
+            $(".thailand").removeClass("show-gps");
+        });
+
+        $(".uae").mouseenter(function(){
+            $(".uae").addClass("show-gps");
+        });
+        $(".uae").mouseleave(function(){
+            $(".uae").removeClass("show-gps");
+        });
+
+        $(".indonesia").mouseenter(function(){
+            $(".indonesia").addClass("show-gps");
+        });
+        $(".indonesia").mouseleave(function(){
+            $(".indonesia").removeClass("show-gps");
+        });
+        
+        $(".new-zealand").mouseenter(function(){
+            $(".new-zealand").addClass("show-gps");
+        });
+        $(".new-zealand").mouseleave(function(){
+            $(".new-zealand").removeClass("show-gps");
+        });
+
+        $(".australia").mouseenter(function(){
+            $(".australia").addClass("show-gps");
+        });
+        $(".australia").mouseleave(function(){
+            $(".australia").removeClass("show-gps");
+        });
+
+        $(".japan").mouseenter(function(){
+            $(".japan").addClass("show-gps");
+        });
+        $(".japan").mouseleave(function(){
+            $(".japan").removeClass("show-gps");
+        });
+
+        $(".canada").mouseenter(function(){
+            $(".canada").addClass("show-gps");
+        });
+        $(".canada").mouseleave(function(){
+            $(".canada").removeClass("show-gps");
+        });
+
+        $(".usa").mouseenter(function(){
+            $(".usa").addClass("show-gps");
+        });
+        $(".usa").mouseleave(function(){
+            $(".usa").removeClass("show-gps");
+        });
+
+        $(".britain").mouseenter(function(){
+            $(".britain").addClass("show-gps");
+        });
+        $(".britain").mouseleave(function(){
+            $(".britain").removeClass("show-gps");
+        });
+
+        $(".spain").mouseenter(function(){
+            $(".spain").addClass("show-gps");
+        });
+        $(".spain").mouseleave(function(){
+            $(".spain").removeClass("show-gps");
+        });
+
+        $(".french").mouseenter(function(){
+            $(".french").addClass("show-gps");
+        });
+        $(".french").mouseleave(function(){
+            $(".french").removeClass("show-gps");
+        });
+
+        $(".netherland").mouseenter(function(){
+            $(".netherland").addClass("show-gps");
+        });
+        $(".netherland").mouseleave(function(){
+            $(".netherland").removeClass("show-gps");
+        });
+
+        $(".germany").mouseenter(function(){
+            $(".germany").addClass("show-gps");
+        });
+        $(".germany").mouseleave(function(){
+            $(".germany").removeClass("show-gps");
+        });
+
+        $(".italy").mouseenter(function(){
+            $(".italy").addClass("show-gps");
+        });
+        $(".italy").mouseleave(function(){
+            $(".italy").removeClass("show-gps");
+        });
+
+        $(".taiwan").mouseenter(function(){
+            $(".taiwan").addClass("show-gps");
+        });
+        $(".taiwan").mouseleave(function(){
+            $(".taiwan").removeClass("show-gps");
+        });
+
+        $(".korea").mouseenter(function(){
+            $(".korea").addClass("show-gps");
+        });
+        $(".korea").mouseleave(function(){
+            $(".korea").removeClass("show-gps");
+        });
+
+        $(".cina").mouseenter(function(){
+            $(".cina").addClass("show-gps");
+        });
+        $(".cina").mouseleave(function(){
+            $(".cina").removeClass("show-gps");
+        });
     </script>
 </body>
 </html>
