@@ -30,6 +30,7 @@ $yellow: #CEFF00;
 
 html {
     cursor: url(img/cursor.svg) 27 22, auto;
+    scroll-behavior: smooth;
 }
 body {
     -webkit-font-smoothing: antialiased;
@@ -53,6 +54,9 @@ p, a, div, span {
 }
 a:hover{
     cursor: url(img/hover.svg) 27 22, auto;
+}
+input {
+    cursor: url(img/textcursor.svg) 27 22, auto;
 }
 
 h1 {
@@ -80,7 +84,7 @@ h2 {
 .accessories-container {
     position: absolute;
     width: 100%;
-    bottom: 15%;
+    top: 85vh;
 }
 .accessories {
     display: inline-block;
@@ -416,6 +420,10 @@ video {
     left: 100px;
     top: 50%;
     transform: translateY(-50%);
+    span{
+        font-family: Nexa-Bold;
+        font-size: 30pt;
+    }
 }
 form {
     position: absolute;
@@ -429,7 +437,7 @@ form {
         width: 500px;
         border-top: solid 2px $white;
         border-bottom: solid 2px $white;
-        font-size: 16pt;
+        font-size: 12pt;
         padding: 20px 0px;
         color: $white;
     }
@@ -440,7 +448,7 @@ form {
         border-top: solid 2px $white;
         border-bottom: solid 2px $white;
         border-left: solid 2px $white;
-        font-size: 16pt;
+        font-size: 12pt;
         width: 150px;
         box-sizing: border-box;
         padding: 20px 30px;
@@ -473,6 +481,7 @@ form {
 .footer-link a {
     display: block;
     text-decoration: none;
+    text-transform: uppercase;
     color: $white;
     margin-bottom: 10px;
     &:hover {
@@ -481,10 +490,9 @@ form {
     }
 }
 .backtotop svg{
-    cursor: pointer;
+    cursor: url(img/hover.svg) 27 22, auto;
     transition: transform .5s cubic-bezier(0, 0.55, 0.45, 1);
     &:hover {
-        cursor: url(img/hover.svg) 27 22, auto;
         transform: rotate(360deg);
         transition: transform .5s cubic-bezier(0, 0.55, 0.45, 1);
     }
@@ -494,13 +502,11 @@ form {
     display: inline-block;
 }
 .copyright {
-    margin-right: 100px;
+    margin-right: 10px;
+    margin-left: calc(100% - 750px);
+    width: 100px;
+    height: 100px;
     margin-top: 200px;
-    margin-bottom: 100px;
-    float: right;
-    width: 650px;
-    display: flex;
-    justify-content: space-between;
     color: $white;
 }
 
@@ -539,6 +545,7 @@ form {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+            text-transform: uppercase;
         }
         .price {
             font-size: 10pt;
@@ -601,6 +608,7 @@ form {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
+            text-transform: uppercase;
         }
         .price {
             font-size: 10pt;
@@ -713,6 +721,7 @@ form {
             transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
         }
         .the-collection {
+            cursor: url(img/holddragblack.svg) 27 22, auto;
             height: 265px;
             transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
         }
@@ -910,8 +919,8 @@ form {
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    width: 100vw;
+    height: 100vh;
     box-sizing: border-box;
     padding: 50px 100px;
     background: black;
@@ -951,6 +960,7 @@ form {
             font-size: 16pt;
             text-decoration: none;
             margin-top: 5px;
+            text-transform: uppercase;
             img {
                 position: fixed;
                 width: 300px;
@@ -1344,6 +1354,7 @@ form {
         .cart-name {
             font-size: 14pt;
             margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .cart-price {
             font-family: Nexa-Bold;
@@ -1496,8 +1507,11 @@ form {
 
 
 @media screen and (max-width: 420px) {
-    .theme {
-        display: none!important;
+    
+    .right-side {
+        .nav-icon {
+            margin-left: 18px!important;
+        }
     }
     .accessories {
         display: none;
@@ -1612,6 +1626,7 @@ form {
     .name {
         font-size: 32pt;
         margin-bottom: 20px;
+        text-transform: uppercase;
     }
     .price {
         font-family: Nexa-Bold;

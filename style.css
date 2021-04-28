@@ -29,6 +29,7 @@
 
 html {
   cursor: url(img/cursor.svg) 27 22, auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -61,6 +62,10 @@ a:hover {
   cursor: url(img/hover.svg) 27 22, auto;
 }
 
+input {
+  cursor: url(img/textcursor.svg) 27 22, auto;
+}
+
 h1 {
   color: #FFFFFF;
   font-size: 14pt;
@@ -90,7 +95,7 @@ h2 {
 .accessories-container {
   position: absolute;
   width: 100%;
-  bottom: 15%;
+  top: 85vh;
 }
 
 .accessories {
@@ -497,6 +502,11 @@ video {
           transform: translateY(-50%);
 }
 
+.join span {
+  font-family: Nexa-Bold;
+  font-size: 30pt;
+}
+
 form {
   position: absolute;
   right: 100px;
@@ -512,7 +522,7 @@ form input {
   width: 500px;
   border-top: solid 2px #FFFFFF;
   border-bottom: solid 2px #FFFFFF;
-  font-size: 16pt;
+  font-size: 12pt;
   padding: 20px 0px;
   color: #FFFFFF;
 }
@@ -524,7 +534,7 @@ form button {
   border-top: solid 2px #FFFFFF;
   border-bottom: solid 2px #FFFFFF;
   border-left: solid 2px #FFFFFF;
-  font-size: 16pt;
+  font-size: 12pt;
   width: 150px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -565,6 +575,7 @@ form button:hover {
 .footer-link a {
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 10px;
 }
@@ -575,7 +586,7 @@ form button:hover {
 }
 
 .backtotop svg {
-  cursor: pointer;
+  cursor: url(img/hover.svg) 27 22, auto;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -583,7 +594,6 @@ form button:hover {
 }
 
 .backtotop svg:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -598,17 +608,11 @@ form button:hover {
 }
 
 .copyright {
-  margin-right: 100px;
+  margin-right: 10px;
+  margin-left: calc(100% - 750px);
+  width: 100px;
+  height: 100px;
   margin-top: 200px;
-  margin-bottom: 100px;
-  float: right;
-  width: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   color: #FFFFFF;
 }
 
@@ -653,6 +657,7 @@ form button:hover {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  text-transform: uppercase;
 }
 
 .product .desc .price {
@@ -731,6 +736,7 @@ form button:hover {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  text-transform: uppercase;
 }
 
 .product-wide .desc .price {
@@ -853,6 +859,7 @@ form button:hover {
 }
 
 .collection-display:hover .the-collection {
+  cursor: url(img/holddragblack.svg) 27 22, auto;
   height: 265px;
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
@@ -1077,8 +1084,8 @@ form button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100vw;
+  height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 50px 100px;
@@ -1130,6 +1137,7 @@ form button:hover {
   font-size: 16pt;
   text-decoration: none;
   margin-top: 5px;
+  text-transform: uppercase;
 }
 
 .overlay-navigation .the-product a img {
@@ -1540,6 +1548,7 @@ form button:hover {
 .cart-product .cart-description .cart-name {
   font-size: 14pt;
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
 .cart-product .cart-description .cart-price {
@@ -1703,8 +1712,8 @@ form button:hover {
 }
 
 @media screen and (max-width: 420px) {
-  .theme {
-    display: none !important;
+  .right-side .nav-icon {
+    margin-left: 18px !important;
   }
   .accessories {
     display: none;
@@ -1830,6 +1839,7 @@ form button:hover {
 .detail-description .name {
   font-size: 32pt;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .detail-description .price {

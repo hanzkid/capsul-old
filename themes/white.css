@@ -25,6 +25,10 @@ h1::before {
   background: rgb(252, 90, 26);
 }
 
+input {
+  cursor: url(../img/textcursorblack.svg) 27 22, auto;
+}
+
 .desc {
   border-bottom: solid 1px rgb(252, 90, 26)!important;
 }
@@ -128,4 +132,49 @@ button:hover {
 
 .detail-img img{
   box-shadow: 5px 5px 20px rgba(0,0,0,0.03);
+}
+
+html {
+  cursor: url(../img/cursorblack.svg) 27 22, auto;
+}
+
+a:hover , .spotify, nav .logo, nav .right-side .theme, .marquee-container:hover, form button:hover, .backtotop svg, .footer-link a:hover, .product-more:hover, #nav {
+  cursor: url(../img/hoverblack.svg) 27 22, auto;
+}
+
+
+.overlay-navigation {
+  background: white;
+}
+.overlay-navigation .menu a {
+  color: black;
+}
+.the-product a {
+  color: #FC5A1A;
+}
+
+.close {
+  cursor: url(../img/hoverblack.svg) 27 22, auto;
+}
+
+.member {
+  background: rgba(255, 255, 255, .8);
+}
+.member h3, .member p, .member a {
+  color: black;
+}
+.member input {
+  border-top: 0px!important;
+  width: 100%;
+  margin-bottom: 20px;
+  color: black!important;
+  border-bottom: solid 2px black!important;
+}
+.member button {
+  border: none!important;
+}
+
+.member input::placeholder {
+  color: black;
+  opacity: 0.5;
 }
