@@ -146,7 +146,7 @@ form input::placeholder {
 }
 
 a:hover , .spotify, nav .logo, nav .right-side .theme, .marquee-container:hover, form button:hover, .backtotop svg, .footer-link a:hover, .product-more:hover, #nav {
-  cursor: url(../img/hoverblack.svg) 27 22, auto;
+  cursor: url(../img/hover.svg) 27 22, auto;
 }
 
 
