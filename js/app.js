@@ -411,42 +411,43 @@ $(".close-cart").click(function(){
 
 
 const math = {
-  lerp: (a, b, n) => {
-    return (1 - n) * a + n * b;
-  },
-  norm: (value, min, max) => {
-    return (value - min) / (max - min);
-  } };
-
+	lerp: (a, b, n) => {
+		return (1 - n) * a + n * b
+	},
+	norm: (value, min, max) => {
+	  	return (value - min) / (max - min)
+	}
+}
 
 const config = {
   height: window.innerHeight,
-  width: window.innerWidth };
-
+  width: window.innerWidth
+}
 
 class Smooth {
   constructor() {
-    this.bindMethods();
+    this.bindMethods()
 
     this.data = {
       ease: 0.1,
       current: 0,
-      last: 0 };
-
+      last: 0,
+      rounded: 0
+    }
 
     this.dom = {
       el: document.querySelector('[data-scroll]'),
-      content: document.querySelector('[data-scroll-content]') };
+      content: document.querySelector('[data-scroll-content]')
+    }
 
+    this.rAF = null
 
-    this.rAF = null;
-
-    this.init();
+    this.init()
   }
 
   bindMethods() {
-    ['scroll', 'run', 'resize'].
-    forEach(fn => this[fn] = this[fn].bind(this));
+    ['scroll', 'run', 'resize']
+    .forEach((fn) => this[fn] = this[fn].bind(this))
   }
 
   setStyles() {
@@ -456,93 +457,186 @@ class Smooth {
       left: 0,
       height: '100%',
       width: '100%',
-      overflow: 'hidden' });
-
+      overflow: 'hidden'        
+    })   
   }
 
   setHeight() {
-    document.body.style.height = `${this.dom.content.offsetHeight}px`;
+    document.body.style.height = `${this.dom.content.getBoundingClientRect().height}px`
   }
 
   resize() {
-    this.setHeight();
-    this.scroll();
-  }
-
-  scroll() {
-    this.data.current = window.scrollY;
-  }
-
-  run() {
-    this.data.last = math.lerp(this.data.last, this.data.current, this.data.ease);
-    if (this.data.last < .1) {
-      this.data.last = 0;
-    }
-
-    const diff = this.data.current - this.data.last;
-    const acc = diff / config.width;
-    const velo = +acc;
-
-    this.dom.content.style.transform = `translate3d(0, -${this.data.last}px, 0)`;
-
-    this.requestAnimationFrame();
-  }
-
-  on() {
-    this.setStyles();
-    this.setHeight();
-    this.addEvents();
-
-    this.requestAnimationFrame();
-  }
-
-  off() {
-    this.cancelAnimationFrame();
-
-    this.removeEvents();
-  }
-
-  requestAnimationFrame() {
-    this.rAF = requestAnimationFrame(this.run);
-  }
-
-  cancelAnimationFrame() {
-    cancelAnimationFrame(this.rAF);
-  }
-
-  destroy() {
-    document.body.style.height = '';
-
-    this.data = null;
-
-    this.removeEvents();
-    this.cancelAnimationFrame();
-  }
-
-  resize() {
-    this.setHeight();
+    this.setHeight()
+    this.scroll()
   }
 
   preload() {
-    imagesLoaded(this.dom.content, instance => {
-      this.setHeight();
-    });
+    imagesLoaded(this.dom.content, (instance) => {
+      this.setHeight()
+    })
+  }
+
+  scroll() {
+    this.data.current = window.scrollY
+  }
+
+  run() {
+    this.data.last += (this.data.current - this.data.last) * this.data.ease
+    this.data.rounded = Math.round(this.data.last * 100) / 100
+    
+    const diff = this.data.current - this.data.rounded
+    const acc = diff / config.width
+    const velo =+ acc
+    const skew = velo * 7.5
+    
+    this.dom.content.style.transform = `translate3d(0, -${this.data.rounded}px, 0) skewY(${skew}deg)`
+
+    this.requestAnimationFrame()
+  }
+
+  on() { 
+    this.setStyles()
+    this.setHeight()
+    this.addEvents()
+
+    this.requestAnimationFrame()
+  }
+
+  off() {
+    this.cancelAnimationFrame()
+
+    this.removeEvents()
+  }
+
+  requestAnimationFrame() {
+    this.rAF = requestAnimationFrame(this.run)
+  }
+
+  cancelAnimationFrame() {
+    cancelAnimationFrame(this.rAF)
+  }
+
+  destroy() {
+    document.body.style.height = ''
+
+    this.data = null
+
+    this.removeEvents()
+    this.cancelAnimationFrame()
+  }
+
+  resize() {
+    this.setHeight()
+    this.data.rounded = this.data.last = this.data.current
   }
 
   addEvents() {
-    window.addEventListener('resize', this.resize, { passive: true });
-    window.addEventListener('scroll', this.scroll, { passive: true });
+    window.addEventListener('resize', this.resize, { passive: true })
+    window.addEventListener('scroll', this.scroll, { passive: true })
   }
 
   removeEvents() {
-    window.removeEventListener('resize', this.resize, { passive: true });
-    window.removeEventListener('scroll', this.scroll, { passive: true });
+    window.removeEventListener('resize', this.resize, { passive: true })
+    window.removeEventListener('scroll', this.scroll, { passive: true })
   }
 
   init() {
-      this.preload();
-    this.on();
-  }}
+    this.preload()
+    this.on()
+  }
+}
+
+new Smooth()
 
 
-new Smooth();
+// Smooth Scroll Anchor Links
+
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+        });
+      }
+    }
+  });
+
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+  
+  if(wScroll > $('.backtotop').offset().top - ($(window).height() / 1)) {
+    $('.backtotop svg').each(function(){
+        $('.backtotop svg').addClass('up-fade-in');
+    });
+  }
+  else {
+    $('.backtotop svg').removeClass('up-fade-in');
+  }
+
+})
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+  
+  if(wScroll > $('h1').offset().top - ($(window).height() / 1)) {
+    $('h1').each(function(){
+        $(this).addClass('up-fade-in');
+    });
+  }
+  else {
+    $(this).each(function(){
+        $(this).removeClass('up-fade-in');
+    });
+  }
+  
+  if(wScroll > $('.footer-link').offset().top - ($(window).height() / 1)) {
+    $('.footer-link a').each(function(i){
+                  
+      setTimeout(function(){
+          
+          $('.footer-link a').eq(i).addClass('up-fade-in');
+      
+      },150 * (i+1));
+      
+    });
+  }
+  else {
+    $('.footer-link a').removeClass('up-fade-in');
+  }
+});
+
+$(window).scroll(function(){
+  var wScroll = $(this).scrollTop();
+  
+  if(wScroll > $('.socmed').offset().top - ($(window).height() / 1)) {
+    $('.socmed-icon').each(function(i){
+                  
+      setTimeout(function(){
+          
+          $('.socmed-icon').eq(i).addClass('up-fade-in');
+      
+      },150 * (i+1));
+      
+    });
+  }
+  else {
+    $('.socmed-icon').removeClass('up-fade-in');
+  }
+});
