@@ -410,6 +410,9 @@ $(".close-cart").click(function(){
 })
 
 
+var mobile = (/iphone|ipod|ipad|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+if (mobile !== true) { 
+
 const math = {
 	lerp: (a, b, n) => {
 		return (1 - n) * a + n * b
@@ -484,12 +487,9 @@ class Smooth {
     this.data.last += (this.data.current - this.data.last) * this.data.ease
     this.data.rounded = Math.round(this.data.last * 100) / 100
     
-    const diff = this.data.current - this.data.rounded
-    const acc = diff / config.width
-    const velo =+ acc
-    const skew = velo * 7.5
+    this.data.current - this.data.rounded
     
-    this.dom.content.style.transform = `translate3d(0, -${this.data.rounded}px, 0) skewY(${skew}deg)`
+    this.dom.content.style.transform = `translate3d(0, -${this.data.rounded}px, 0)`
 
     this.requestAnimationFrame()
   }
@@ -547,7 +547,7 @@ class Smooth {
 }
 
 new Smooth()
-
+}
 
 // Smooth Scroll Anchor Links
 
@@ -594,17 +594,6 @@ $(window).scroll(function(){
 
 $(window).scroll(function(){
   var wScroll = $(this).scrollTop();
-  
-  if(wScroll > $('h1').offset().top - ($(window).height() / 1)) {
-    $('h1').each(function(){
-        $(this).addClass('up-fade-in');
-    });
-  }
-  else {
-    $(this).each(function(){
-        $(this).removeClass('up-fade-in');
-    });
-  }
   
   if(wScroll > $('.footer-link').offset().top - ($(window).height() / 1)) {
     $('.footer-link a').each(function(i){
