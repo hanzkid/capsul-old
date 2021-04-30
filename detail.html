@@ -313,7 +313,7 @@
                 <a href="terms.html">Terms</a>
                 <a href="terms.html">Policy</a>
             </div>
-            <a class="anchor" href="#top">
+            <a class="anchor" href="#">
                 <div class="backtotop">
                     <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="43.5" cy="43.5" r="42" class="cls-2" stroke-width="3"/>
@@ -362,10 +362,10 @@
         </div>
 
         <div class="the-product">
-            <a href="product-detail.html"><img src="product/Product 1/Freestyle/freestyle 1.jpg">L/S Black Visiionary</a>
+            <a href="product-detail.html"><img src="product/Product 1/Freestyle/freestyle 1.jpg">L/S Black Visionary</a>
             <a href="product-detail.html"><img src="product/Product 2/Freestyle/freestyle 1.jpg">L/S Military Green Visionary</a>
-            <a href="product-detail.html"><img src="product/Product 3/Freestyle/freestyle 1.jpg">L/S Galaxy Ice Tie-Die</a>
-            <a href="product-detail.html"><img src="product/Product 4/Freestyle/freestyle 1.jpg">S/S Galaxy Ice Tie-Die</a>
+            <a href="product-detail.html"><img src="product/Product 3/Freestyle/freestyle 1.jpg">L/S Galaxy Ice Tie-Dye</a>
+            <a href="product-detail.html"><img src="product/Product 4/Freestyle/freestyle 1.jpg">S/S Galaxy Ice Tie-Dye</a>
         </div>
 
     </div>
@@ -382,6 +382,36 @@
         $(".in").mouseleave(function(){
             $(".chart").css({"transform":"translate(-50%, 10px)", "opacity": "0"})
         })
+        
+        $(window).scroll(function(){
+            var wScroll = $(this).scrollTop();
+            
+            if(wScroll > $('.product-wide').offset().top - ($(window).height() / 1)) {
+            $('.product-wide').each(function(i){
+                            
+                setTimeout(function(){
+                    
+                    $('.product-wide').eq(i).addClass('up-fade-in');
+                
+                },200 * (i+1));
+                
+            });
+            
+            }
+            else {
+            $('.product-wide').removeClass('up-fade-in');
+            }
+        });
+
+        $('.detail-description div, .detail-description p').each(function(i){
+                            
+                setTimeout(function(){
+                    
+                    $('.detail-description div, .detail-description p').eq(i).addClass('up-fade-in');
+                
+                },200 * (i+1));
+                
+            });
     </script>
 </body>
 </html>
