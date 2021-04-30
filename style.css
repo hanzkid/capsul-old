@@ -30,9 +30,11 @@
 html {
   cursor: url(img/cursor.svg) 27 22, auto;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
@@ -48,6 +50,10 @@ body {
   user-select: none;
   /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+[data-scroll-content] {
+  padding: 0 0 15vh 0;
 }
 
 h1, h2, h3, h4, h5, h6, .quotes, .logo {
@@ -71,6 +77,8 @@ h1 {
   font-size: 14pt;
   position: relative;
   letter-spacing: 1px;
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 h1:before {
@@ -460,8 +468,6 @@ video {
   color: #FC5A1A;
   font-size: 24pt;
   font-family: Nexa-Bold;
-  letter-spacing: 2px;
-  word-spacing: 20px;
 }
 
 @-webkit-keyframes marquee {
@@ -566,6 +572,9 @@ form button:hover {
 
 .socmed-icon {
   margin-right: 20px;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .socmed a:hover .socmed-icon {
@@ -578,6 +587,11 @@ form button:hover {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 10px;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
 }
 
 .footer-link a:hover {
@@ -585,12 +599,20 @@ form button:hover {
   text-decoration: underline;
 }
 
+.footer-link:nth-child(2) {
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
 .backtotop svg {
   cursor: url(img/hover.svg) 27 22, auto;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1), -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 0;
 }
 
 .backtotop svg:hover {
@@ -608,11 +630,10 @@ form button:hover {
 }
 
 .copyright {
-  margin-right: 10px;
-  margin-left: calc(100% - 750px);
+  padding-right: 10px;
+  padding-left: calc(100% - 750px);
+  padding-top: 200px;
   width: 100px;
-  height: 100px;
-  margin-top: 200px;
   color: #FFFFFF;
 }
 
@@ -622,6 +643,11 @@ form button:hover {
   margin-right: 20px;
   width: 180px;
   vertical-align: top;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .product a {
@@ -695,6 +721,11 @@ form button:hover {
   margin-right: 2%;
   width: 32%;
   vertical-align: top;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .product-wide a {
@@ -1235,8 +1266,7 @@ form button:hover {
   .copyright {
     float: none;
     width: auto;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    padding-top: 50px;
     margin-left: 5%;
     margin-right: auto;
   }
@@ -1981,5 +2011,24 @@ form button:hover {
 
 .show-gps {
   display: block;
+}
+
+.additional {
+  color: black;
+  margin-top: 50px;
+}
+
+.detail-description div, .detail-description p {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.up-fade-in {
+  opacity: 1 !important;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
 /*# sourceMappingURL=style.css.map */
