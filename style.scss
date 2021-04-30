@@ -31,8 +31,10 @@ $yellow: #CEFF00;
 html {
     cursor: url(img/cursor.svg) 27 22, auto;
     scroll-behavior: smooth;
+    height: 100%;
 }
 body {
+    height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: $black;
@@ -44,6 +46,11 @@ body {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
 }
+
+[data-scroll-content] {
+    padding: 0 0 15vh 0;
+  }
+  
 
 h1,h2,h3,h4,h5,h6,.quotes,.logo {
     font-family: Nexa-Bold;
@@ -64,6 +71,7 @@ h1 {
     font-size: 14pt;
     position: relative;
     letter-spacing: 1px;
+    transition: all .5s cubic-bezier(0, 0.55, 0.45, 1);
     &:before {
         content: '';
         width: 80px;
@@ -395,8 +403,6 @@ video {
     color: $orange;
     font-size: 24pt;
     font-family: Nexa-Bold;
-    letter-spacing: 2px;
-    word-spacing: 20px;
 }
 
 @keyframes marquee {
@@ -472,6 +478,8 @@ form {
 }
 .socmed-icon {
     margin-right: 20px;
+    opacity: 0;
+    transform: translateY(20px);
 }
 .socmed a:hover {
     .socmed-icon {
@@ -484,14 +492,23 @@ form {
     text-transform: uppercase;
     color: $white;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition-delay: .3s;
     &:hover {
         cursor: url(img/hover.svg) 27 22, auto;
         text-decoration: underline;
     }
 }
+.footer-link:nth-child(2) {
+    transition-delay: .1s;
+}
 .backtotop svg{
     cursor: url(img/hover.svg) 27 22, auto;
-    transition: transform .5s cubic-bezier(0, 0.55, 0.45, 1);
+    transition: all .5s cubic-bezier(0, 0.55, 0.45, 1);
+    transition-delay: 1.3s;
+    transform: translateY(20px);
+    opacity: 0;
     &:hover {
         transform: rotate(360deg);
         transition: transform .5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -502,11 +519,10 @@ form {
     display: inline-block;
 }
 .copyright {
-    margin-right: 10px;
-    margin-left: calc(100% - 750px);
+    padding-right: 10px;
+    padding-left: calc(100% - 750px);
+    padding-top: 200px;
     width: 100px;
-    height: 100px;
-    margin-top: 200px;
     color: $white;
 }
 
@@ -518,6 +534,9 @@ form {
     margin-right: 20px;
     width: 180px;
     vertical-align: top;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .5s cubic-bezier(0, 0.55, 0.45, 1);
     a {
         text-decoration: none;
     }
@@ -577,6 +596,9 @@ form {
     margin-right: 2%;
     width: 32%;
     vertical-align: top;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .5s cubic-bezier(0, 0.55, 0.45, 1);
     a {
         text-decoration: none;
     }
@@ -1053,8 +1075,7 @@ form {
     .copyright {
         float: none;
         width: auto;
-        margin-top: 150px;
-        margin-bottom: 50px;
+        padding-top: 50px;
         margin-left: 5%;
         margin-right: auto;
     }
@@ -1750,4 +1771,25 @@ form {
 }
 .show-gps {
     display: block;
+}
+.additional {
+    color: black;
+    margin-top: 50px;
+}
+.detail-description div, .detail-description p {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+
+
+
+
+
+
+.up-fade-in {
+    opacity: 1!important;
+    transform: translateY(0)!important;
+    transition: all .5s cubic-bezier(0, 0.55, 0.45, 1);
 }
