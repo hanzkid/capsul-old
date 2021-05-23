@@ -738,8 +738,8 @@ form {
     margin-left: -100px;
     position: relative;
     &:hover {
-        .collection-background img:nth-child(2){
-            opacity: 0;
+        .collection-background img{
+            filter: invert(0);
             transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
         }
         .the-collection {
@@ -760,6 +760,7 @@ form {
             height: 100%;
             object-fit: cover;
             position: absolute;
+            filter: invert(1);
             transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
         }
     }
