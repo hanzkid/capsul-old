@@ -167,7 +167,6 @@
             <img class="content__img" src="img/motion-hover/14.jpg" alt="Some image" />
             <img class="content__img" src="img/motion-hover/15.jpg" alt="Some image" />
         </div>
-        <div class="gradient-blocker"></div>
     </div>
     <a href="allproducts.html">
         <div class="headline-button">SHOP NOW</div>
@@ -804,13 +803,11 @@
         //spotify playlist
 
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 300){  
-                $('.spotify svg').addClass("spotify-sticky");
-                $(".spotify-sticky").parent().children(".accessories-desc").css("opacity","0");
+            if ($(this).scrollTop() > 300){
+                document.querySelector(".spotify > .accessories-desc").style.opacity = 0;
             }
             else{
-                $('.spotify svg').removeClass("spotify-sticky");
-                $(".spotify svg").parent().children(".accessories-desc").css("opacity","1");
+                document.querySelector(".spotify > .accessories-desc").style.opacity = 1;
             }
         });
 
