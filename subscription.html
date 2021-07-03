@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="style.css">
+<style>
+    .popupsubscription {
+        position: relative;
+        background: white;
+        width: 600px;
+        height: 400px;
+        cursor: auto;
+    }
+    .popupsubscriptionleft {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: 38%;
+        height: 100%;
+    }
+    .popupsubscriptionleft img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .popupsubscriptionright {
+        display: inline-block;
+        vertical-align: middle;
+        width: 61%;
+    }
+    .popupsubscriptionform {
+        color: black;
+        width: calc(100% - 20%);
+    }
+    .popupsubscriptionform h2{
+        margin-top: 0;
+        font-size: 22pt;
+    }
+    .popupsubscriptionform p{
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 14pt;
+    }
+    .popupsubscriptionform input {
+        border: none;
+        border-bottom: solid 2px black;
+        color: black;
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+        margin: none;
+        cursor: text;
+    }
+    .popupsubscriptionform button {
+        border: none;
+        color: black;
+        width: 100%;
+        background-color: #fc5a1a;
+        font-size: 14pt;
+        cursor: pointer;
+    }
+    .popupsubscriptionform button:hover {
+        color: white;
+        background-color: #000000;
+    }
+    .closepopup {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 99;
+    }
+    @media screen and (max-width: 600px) {
+        .popupsubscription {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        .popupsubscription {
+            height: auto;
+        }
+        .popupsubscriptionleft {
+            display: inline-block;
+            width: 100%;
+            height: 200px;
+        }
+        .popupsubscriptionright {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+        .popupsubscriptionform h2{
+            margin-bottom: 10px;
+            margin-top: 30px;
+            font-size: 18pt;
+        }
+        .popupsubscriptionform p{
+            font-size: 12pt;
+        }
+        .popupsubscriptionform{
+            padding-bottom: 30px;
+        }
+    }
+</style>
+<div class="popupsubscription">
+    <svg class="closepopup" width="17" height="16" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.41421" y1="1.58579" x2="39.4142" y2="39.5858" stroke="black" stroke-width="4"/>
+        <line x1="40.3566" y1="3.46961" x2="1.35656" y2="39.4696" stroke="black" stroke-width="4"/>
+    </svg>
+    <div class="popupsubscriptionleft">
+        <img src="img/motion-hover/6.jpg">
+    </div>
+    <div class="popupsubscriptionright">
+        <form class="popupsubscriptionform">
+            <h2>JOIN THE [CREW]</h2>
+            <p>Subscribe Now</p>
+            <input type="email" placeholder="youremail@example.com">
+            <button>Subscribe</button>
+        </form>
+    </div>
+</div>
