@@ -2138,7 +2138,7 @@ form button:hover {
     text-align: center;
   }
 }
-.subscription .description .formsubs h1 {
+.subscription .description .formsubs h2 {
   font-weight: 700;
   font-size: 3em;
   margin: 0 0 24px;
