@@ -301,7 +301,7 @@ nav {
     color-stop(50%, black)
   );
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 50%);
-  z-index: 9999;
+  z-index: 9;
   padding: 40px 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
