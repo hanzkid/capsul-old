@@ -145,7 +145,7 @@ h2 {
   cursor: url(img/hover.svg) 27 22, auto;
   z-index: 999;
   -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
 .spotify:hover .accessories-desc {
@@ -196,34 +196,34 @@ h2 {
 .spotify-close .spotify-close-word {
   font-family: Nexa-Bold;
   -webkit-animation: close 2s linear infinite;
-          animation: close 2s linear infinite;
+  animation: close 2s linear infinite;
   width: 100vh;
   -webkit-transform: rotate(90deg) translateX(-90px);
-          transform: rotate(90deg) translateX(-90px);
+  transform: rotate(90deg) translateX(-90px);
   -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
   white-space: nowrap;
 }
 
 @-webkit-keyframes close {
   from {
     -webkit-transform: rotate(90deg) translateX(-90px) translateX(0);
-            transform: rotate(90deg) translateX(-90px) translateX(0);
+    transform: rotate(90deg) translateX(-90px) translateX(0);
   }
   to {
     -webkit-transform: rotate(90deg) translateX(-90px) translateX(-115px);
-            transform: rotate(90deg) translateX(-90px) translateX(-115px);
+    transform: rotate(90deg) translateX(-90px) translateX(-115px);
   }
 }
 
 @keyframes close {
   from {
     -webkit-transform: rotate(90deg) translateX(-90px) translateX(0);
-            transform: rotate(90deg) translateX(-90px) translateX(0);
+    transform: rotate(90deg) translateX(-90px) translateX(0);
   }
   to {
     -webkit-transform: rotate(90deg) translateX(-90px) translateX(-115px);
-            transform: rotate(90deg) translateX(-90px) translateX(-115px);
+    transform: rotate(90deg) translateX(-90px) translateX(-115px);
   }
 }
 
@@ -293,12 +293,18 @@ nav {
   position: fixed;
   width: 100%;
   background: black;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(50%, black));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(50%, black)
+  );
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, black 50%);
   z-index: 9999;
   padding: 40px 0px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav .logo {
@@ -308,7 +314,7 @@ nav .logo {
   right: 0;
   top: 40vh;
   -webkit-transform: translate(-47%, -50%);
-          transform: translate(-47%, -50%);
+  transform: translate(-47%, -50%);
   cursor: url(img/hover.svg) 27 22, auto;
   width: 70vw;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -324,7 +330,7 @@ nav .logo-sticky {
   right: 0;
   top: 40px;
   -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   width: 100px;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -382,11 +388,11 @@ nav .right-side .nav-icon {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   isolation: isolate;
   overflow: hidden;
 }
@@ -403,7 +409,7 @@ nav .right-side .nav-icon {
   opacity: 0;
   will-change: transform;
   -webkit-filter: var(--filter-img);
-          filter: var(--filter-img);
+  filter: var(--filter-img);
 }
 
 .content__title {
@@ -417,7 +423,13 @@ nav .right-side .nav-icon {
 .gradient-blocker {
   width: 100%;
   height: 100px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(50%, black));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(50%, black)
+  );
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 50%);
   position: absolute;
   bottom: 0;
@@ -472,7 +484,7 @@ video {
 
 .marquee-scrolling {
   -webkit-animation: marquee 6s linear infinite;
-          animation: marquee 6s linear infinite;
+  animation: marquee 6s linear infinite;
   display: inline-block;
   padding-right: 10px;
   color: #fc5a1a;
@@ -483,22 +495,22 @@ video {
 @-webkit-keyframes marquee {
   from {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   to {
     -webkit-transform: translateX(-10%);
-            transform: translateX(-10%);
+    transform: translateX(-10%);
   }
 }
 
 @keyframes marquee {
   from {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   to {
     -webkit-transform: translateX(-10%);
-            transform: translateX(-10%);
+    transform: translateX(-10%);
   }
 }
 
@@ -515,7 +527,7 @@ video {
   left: 100px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .join span {
@@ -528,7 +540,7 @@ form {
   right: 100px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 form input {
@@ -553,7 +565,7 @@ form button {
   font-size: 12pt;
   width: 150px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 20px 30px;
   color: #ffffff;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -576,15 +588,15 @@ form button:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .socmed-icon {
   margin-right: 20px;
   opacity: 0;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
 }
 
 .socmed a:hover .socmed-icon {
@@ -599,9 +611,9 @@ form button:hover {
   margin-bottom: 10px;
   opacity: 0;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .footer-link a:hover {
@@ -611,7 +623,7 @@ form button:hover {
 
 .footer-link:nth-child(2) {
   -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
 .backtotop svg {
@@ -619,19 +631,20 @@ form button:hover {
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   -webkit-transition-delay: 1.3s;
-          transition-delay: 1.3s;
+  transition-delay: 1.3s;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
   opacity: 0;
 }
 
 .backtotop svg:hover {
   -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
-  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1), -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
+  transition: transform 0.5s cubic-bezier(0, 0.55, 0.45, 1),
+    -webkit-transform 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 .socmed,
@@ -657,7 +670,7 @@ form button:hover {
   vertical-align: top;
   opacity: 0;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -679,7 +692,7 @@ form button:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .product .desc {
@@ -724,7 +737,7 @@ form button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .product-wide {
@@ -735,7 +748,7 @@ form button:hover {
   vertical-align: top;
   opacity: 0;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -757,7 +770,7 @@ form button:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .product-wide .img-container:before {
@@ -827,7 +840,7 @@ form button:hover {
   margin: 0 auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-decoration: underline;
   -webkit-transition: color 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: color 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -897,7 +910,7 @@ form button:hover {
 
 .collection-display:hover .collection-background img {
   -webkit-filter: invert(0);
-          filter: invert(0);
+  filter: invert(0);
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -924,10 +937,10 @@ form button:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -993,9 +1006,9 @@ form button:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
 }
 
 .the-collection::-webkit-scrollbar {
@@ -1044,7 +1057,7 @@ form button:hover {
   left: 0;
   top: auto;
   -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .member input {
@@ -1144,12 +1157,12 @@ form button:hover {
   width: 100vw;
   height: 100vh;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 50px 100px;
   background: black;
   z-index: 9999999999;
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -1202,7 +1215,7 @@ form button:hover {
   width: 300px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   opacity: 0;
   z-index: -1;
   display: none;
@@ -1226,7 +1239,7 @@ form button:hover {
 
 .navigation-show {
   -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
 }
@@ -1266,7 +1279,7 @@ form button:hover {
     margin-bottom: 30px;
     top: auto;
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
   form {
     position: relative;
@@ -1275,7 +1288,7 @@ form button:hover {
     top: auto;
     width: calc(100% - 10%);
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
   form input {
     width: 70%;
@@ -1308,7 +1321,7 @@ form button:hover {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .second-justifying .product {
     display: inline-block;
@@ -1332,7 +1345,7 @@ form button:hover {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .second-justifying .product .img-container:before {
     content: "";
@@ -1377,7 +1390,7 @@ form button:hover {
   .myworld {
     left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
@@ -1398,8 +1411,8 @@ form button:hover {
   .menu-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .socmed,
   .footer-link {
@@ -1450,7 +1463,7 @@ form button:hover {
   .member {
     width: 90%;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     padding: 30px 30px 50px 30px;
   }
 }
@@ -1528,7 +1541,7 @@ form button:hover {
 .cart {
   padding: 30px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 100vh;
   position: fixed;
   right: -441px;
@@ -1632,7 +1645,7 @@ form button:hover {
   text-align: center;
   padding-top: 12px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: Nexa-Bold;
 }
 
@@ -1645,8 +1658,14 @@ form button:hover {
   margin-left: -30px;
   padding: 50px 30px 0px 30px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(50%, black));
+  box-sizing: border-box;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(50%, black)
+  );
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 50%);
 }
 
@@ -1656,7 +1675,7 @@ form button:hover {
   font-family: Nexa-Bold;
   vertical-align: baseline;
   -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
+  transform: translateY(-12px);
 }
 
 .checkout {
@@ -1691,9 +1710,9 @@ form button:hover {
   border: 1px solid white;
   height: 35px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .input-number-decrement,
@@ -1741,9 +1760,9 @@ form button:hover {
   border: 1px solid white;
   height: 35px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #input-number-decrement,
@@ -1800,7 +1819,7 @@ form button:hover {
     width: 100vw;
     right: calc -105vw;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
   .cart p {
     font-size: 24pt;
@@ -1962,7 +1981,7 @@ form button:hover {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 10px);
-          transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
   opacity: 0;
   top: -35px;
   -webkit-transition: all 0.3s cubic-bezier(0, 0.55, 0.45, 1);
@@ -2033,9 +2052,9 @@ form button:hover {
   position: absolute;
   margin-top: -20px;
   -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
   -webkit-transform: translateX(-210px);
-          transform: translateX(-210px);
+  transform: translateX(-210px);
   text-align: right;
   display: none;
 }
@@ -2053,14 +2072,100 @@ form button:hover {
 .detail-description p {
   opacity: 0;
   -webkit-transform: translateY(20px);
-          transform: translateY(20px);
+  transform: translateY(20px);
 }
 
 .up-fade-in {
   opacity: 1 !important;
   -webkit-transform: translateY(0) !important;
-          transform: translateY(0) !important;
+  transform: translateY(0) !important;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
+
+/* Subscription */
+.subscription {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 900px) {
+  .subscription {
+    width: 90%;
+  }
+}
+.subscription .hero {
+  width: 375px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+@media screen and (max-width: 900px) {
+  .subscription .hero {
+    display: none;
+  }
+}
+.subscription .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3.5em;
+}
+@media screen and (max-width: 350px) {
+  .subscription .description {
+    padding: 1.5em;
+  }
+}
+.subscription .description form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.subscription .description form h1 {
+  font-weight: 700;
+  font-size: 3em;
+  margin: 0 0 24px;
+}
+.subscription .description form p {
+  margin: 0 0 56px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+.subscription .description form input[type="text"] {
+  margin: 0 0 32px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+  padding-bottom: 8px;
+}
+.subscription .description button[type="submit"] {
+  cursor: pointer;
+  background-color: #fc5a1a;
+  line-height: 3;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+.subscription .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 24px;
+  cursor: pointer;
+}
+.subscription .closeicon {
+  width: 24px;
+  height: 24px;
+}
+
 /*# sourceMappingURL=style.css.map */

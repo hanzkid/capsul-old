@@ -1780,3 +1780,82 @@ form {
   transform: translateY(0) !important;
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
 }
+
+// Subscription
+.subscription {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background-color: #fff;
+  overflow-x: hidden;
+  @media screen and (max-width: 900px) {
+    width: 90%;
+  }
+  .hero {
+    width: 375px;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.5em;
+    @media screen and (max-width: 350px) {
+      padding: 1.5em;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      h1 {
+        font-weight: bold;
+        font-size: 3em;
+        margin: 0 0 24px;
+      }
+      p {
+        margin: 0 0 56px;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        font-weight: 300;
+      }
+      input[type="text"] {
+        margin: 0 0 32px;
+        font-size: 18px;
+        border: none;
+        border-bottom: 2px solid #000;
+        background-color: transparent;
+        padding-bottom: 8px;
+      }
+    }
+    button[type="submit"] {
+      cursor: pointer;
+      background-color: #fc5a1a;
+      line-height: 3;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 24px;
+    cursor: pointer;
+    &icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
