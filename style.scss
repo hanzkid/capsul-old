@@ -1839,6 +1839,9 @@ form {
         line-height: 1.5em;
         color: #000;
         font-weight: 300;
+        @media screen and (max-width: 900px) {
+          margin: 0 0 32px;
+        }
       }
       input[type="text"] {
         margin: 0 0 32px;
@@ -1852,6 +1855,7 @@ form {
       }
     }
     .subs-button-submit {
+      margin: 0 0 16px;
       width: 100%;
       cursor: pointer;
       background-color: #fc5a1a;

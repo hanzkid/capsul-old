@@ -2152,6 +2152,11 @@ form button:hover {
   font-weight: 300;
   color: #000;
 }
+@media screen and (max-width: 900px) {
+  .subscription .description .formsubs p {
+    margin: 0 0 32px;
+  }
+}
 .subscription .description .formsubs input[type="text"] {
   margin: 0 0 32px;
   font-size: 18px;
