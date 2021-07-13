@@ -2132,6 +2132,7 @@ form button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: static !important;
 }
 @media screen and (max-width: 900px) {
   .subscription .description .formsubs {
