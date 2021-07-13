@@ -2131,7 +2131,6 @@ form button:hover {
 .subscription .description .formsubs {
   display: flex;
   flex-direction: column;
-  text-align: center;
   position: static !important;
   transform: none !important;
 }
