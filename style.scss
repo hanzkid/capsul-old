@@ -1818,10 +1818,12 @@ form {
     @media screen and (max-width: 350px) {
       padding: 1.5em;
     }
-    form {
+    .formsubs {
       display: flex;
       flex-direction: column;
-      text-align: center;
+      @media screen and (max-width: 900px) {
+        text-align: center;
+      }
       h1 {
         font-weight: bold;
         font-size: 3em;
@@ -1840,9 +1842,11 @@ form {
         border-bottom: 2px solid #000;
         background-color: transparent;
         padding-bottom: 8px;
+        width: 100%;
       }
     }
-    button[type="submit"] {
+    .subs-button-submit {
+      width: 100%;
       cursor: pointer;
       background-color: #fc5a1a;
       line-height: 3;
