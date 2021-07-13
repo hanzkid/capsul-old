@@ -2142,12 +2142,14 @@ form button:hover {
   font-weight: 700;
   font-size: 3em;
   margin: 0 0 24px;
+  color: #000;
 }
 .subscription .description .formsubs p {
   margin: 0 0 56px;
   font-size: 1.5em;
   line-height: 1.5em;
   font-weight: 300;
+  color: #000;
 }
 .subscription .description .formsubs input[type="text"] {
   margin: 0 0 32px;
@@ -2161,6 +2163,7 @@ form button:hover {
 .subscription .description .subs-button-submit {
   cursor: pointer;
   background-color: #fc5a1a;
+  color: #000;
   line-height: 3;
   border: none;
   font-size: 18px;
