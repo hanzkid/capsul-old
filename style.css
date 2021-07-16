@@ -1899,6 +1899,7 @@ form button:hover {
   white-space: nowrap;
   padding-bottom: 16px;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .detail .detail-img .thumbnail img {
