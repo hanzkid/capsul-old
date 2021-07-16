@@ -156,6 +156,12 @@ h2 {
 .spotify .accessories-desc {
   margin-top: 0px;
   margin-right: 5px;
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+
+.spotify .accessories-desc.hide {
+  opacity: 0;
 }
 
 .spotify-playlist {

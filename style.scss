@@ -141,6 +141,11 @@ h2 {
   .accessories-desc {
     margin-top: 0px;
     margin-right: 5px;
+    opacity: 1;
+    transition: all 0.25s ease;
+    &.hide {
+      opacity: 0;
+    }
   }
 }
 
