@@ -432,7 +432,7 @@ video {
   position: absolute;
   left: 100px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0.7);
   span {
     font-family: Nexa-Bold;
     font-size: 30pt;
