@@ -1879,3 +1879,80 @@ form {
     }
   }
 }
+.custom-page {
+  margin-top: 80px;
+  * {
+    color: #fff;
+  }
+  .about {
+    padding: 0 8em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 750px) {
+      padding: 0 2em;
+    }
+    &-header {
+      font-size: 5em;
+      text-align: center;
+      min-height: 300px;
+      margin: 0 0 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @media screen and (max-width: 750px) {
+        font-size: 3em;
+      }
+      span {
+        position: absolute;
+        top: 27%;
+        right: -8%;
+        font-size: 0.5em;
+      }
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 1250px) {
+        flex-direction: column;
+      }
+      &-hero {
+        object-fit: cover;
+        height: 85vh;
+        @media screen and (max-width: 1250px) {
+          height: 600px;
+          width: 100%;
+        }
+      }
+      &-description {
+        padding-left: 5em;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 1250px) {
+          padding-left: 0;
+          height: auto;
+        }
+        h2 {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            width: 80px;
+            height: 6px;
+            background-color: #fc5a1a;
+            left: 0;
+          }
+        }
+        p {
+          flex: 1;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
