@@ -2243,6 +2243,7 @@ form button:hover {
 .custom-page .about-wrapper-hero {
   object-fit: cover;
   height: 85vh;
+  width: 500px;
 }
 @media screen and (max-width: 1250px) {
   .custom-page .about-wrapper-hero {
@@ -2264,6 +2265,7 @@ form button:hover {
 }
 .custom-page .about-wrapper-description h2 {
   position: relative;
+  margin: 0 0 2em;
 }
 .custom-page .about-wrapper-description h2::after {
   content: "";

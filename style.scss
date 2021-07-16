@@ -1922,6 +1922,7 @@ form {
       &-hero {
         object-fit: cover;
         height: 85vh;
+        width: 500px;
         @media screen and (max-width: 1250px) {
           height: 600px;
           width: 100%;
@@ -1938,6 +1939,7 @@ form {
         }
         h2 {
           position: relative;
+          margin: 0 0 2em;
           &::after {
             content: "";
             position: absolute;
