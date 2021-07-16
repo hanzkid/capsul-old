@@ -1621,9 +1621,9 @@ form {
     }
     .thumbnail {
       height: 85px;
-      overflow: hidden;
       white-space: nowrap;
-      overflow-y: hidden;
+      padding-bottom: 16px;
+      overflow-x: auto;
       img {
         height: 100%;
         margin-left: 7px;
