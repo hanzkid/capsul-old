@@ -1884,11 +1884,14 @@ form button:hover {
 
 .detail .detail-img .detail-preview {
   width: 100%;
+      height: 500px;
   margin-bottom: 20px;
 }
 
 .detail .detail-img .detail-preview img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .detail .detail-img .thumbnail {
