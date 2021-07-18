@@ -1973,3 +1973,22 @@ form {
     }
   }
 }
+
+// Cart
+#cart {
+  position: relative;
+}
+.cart-badge {
+  position:  absolute;
+  top: -12px;
+  right:  -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border:  1px solid var(--back-color);
+  color: var(--back-color);
+}
