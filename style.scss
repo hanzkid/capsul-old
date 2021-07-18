@@ -624,6 +624,9 @@ form {
     width: 100%;
     height: 100%;
     background: #fc5a1a;
+    &:hover {
+      cursor: url(img/cursorblack.svg) 27 22, auto;
+    }
     img {
       position: absolute;
       width: 100%;

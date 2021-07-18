@@ -784,6 +784,10 @@ form button:hover {
   cursor: url(img/cursorblack.svg) 27 22, auto;
 }
 
+.product .img-container:hover {
+  cursor: url(img/cursorblack.svg) 27 22, auto;
+}
+
 .product-wide .img-container:before {
   content: "";
   float: left;
