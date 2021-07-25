@@ -790,6 +790,36 @@
 
     </div>
 
+    <div id="cursor">
+        <img src="/img/cursor.svg">
+    </div>
+    <script>
+        const cursor = document.querySelector("#cursor");
+        (function () {
+          document.onmousemove = handleMouseMove;
+          document.onmousedown = handleMouseDown;
+          document.onmouseup = handleMouseUp;
+          function handleMouseDown(event) {
+            cursor.style.transform = `scale(.7)`;
+          }
+          function handleMouseUp(event) {
+            cursor.style.transform = `scale(1)`;
+          }
+          function handleMouseMove(event) {
+            var eventDoc, doc, body;
+
+            event = event || window.event;
+            if (event.pageX == null && event.clientX != null) {
+              eventDoc = (event.target && event.target.ownerDocument) || document;
+              doc = eventDoc.documentElement;
+              body = eventDoc.body;
+            }
+            cursor.style.top = `${event.clientY - 56 / 2}px`;
+            cursor.style.left = `${event.clientX - 56 / 2}px`;
+          }
+        })();
+    </script>
+
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/TweenMax.min.js"></script>

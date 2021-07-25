@@ -25,12 +25,29 @@
   margin: 0;
   padding: 0;
   outline: none;
+  cursor: none;
 }
 
 html {
-  cursor: url(img/cursor.svg) 27 22, auto;
   scroll-behavior: smooth;
   height: 100%;
+}
+
+#cursor {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-in;
+}
+
+#cursor img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 body {
@@ -72,10 +89,6 @@ a,
 div,
 span {
   font-family: Nexa;
-}
-
-a:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
 }
 
 input {
@@ -143,7 +156,6 @@ h2 {
   left: auto;
   right: 100px;
   bottom: 10%;
-  cursor: url(img/hover.svg) 27 22, auto;
   z-index: 999;
   -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
@@ -322,7 +334,6 @@ nav .logo {
   top: 40vh;
   -webkit-transform: translate(-47%, -50%);
   transform: translate(-47%, -50%);
-  cursor: url(img/hover.svg) 27 22, auto;
   width: 70vw;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -351,7 +362,6 @@ nav .right-side {
 nav .right-side .theme {
   vertical-align: middle;
   margin-right: 10px;
-  cursor: url(img/hover.svg) 27 22, auto;
   display: none;
 }
 
@@ -479,7 +489,6 @@ video {
 }
 
 .marquee-container:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   background: #fc5a1a;
@@ -584,7 +593,6 @@ form button:hover {
   color: #000000;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
-  cursor: url(img/hover.svg) 27 22, auto;
 }
 
 .menu-footer {
@@ -624,7 +632,6 @@ form button:hover {
 }
 
 .footer-link a:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   text-decoration: underline;
 }
 
@@ -634,7 +641,6 @@ form button:hover {
 }
 
 .backtotop svg {
-  cursor: url(img/hover.svg) 27 22, auto;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   -webkit-transition-delay: 1.3s;
@@ -734,12 +740,11 @@ form button:hover {
 }
 
 .product .desc .see:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   text-decoration: underline;
 }
 
 .justifying {
-  width: calc(100%-100px);
+  width: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,11 +786,9 @@ form button:hover {
 }
 
 .product-wide .img-container:hover {
-  cursor: url(img/cursorblack.svg) 27 22, auto;
 }
 
 .product .img-container:hover {
-  cursor: url(img/cursorblack.svg) 27 22, auto;
 }
 
 .product-wide .img-container:before {
@@ -827,7 +830,6 @@ form button:hover {
 }
 
 .product-wide .desc .see:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   text-decoration: underline;
 }
 
@@ -862,7 +864,6 @@ form button:hover {
 }
 
 .product-more:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   background: #fc5a1a;
   -webkit-transition: background 0.5s cubic-bezier(0, 0.55, 0.45, 1);
   transition: background 0.5s cubic-bezier(0, 0.55, 0.45, 1);
@@ -895,7 +896,6 @@ form button:hover {
 }
 
 .country:hover {
-  cursor: url(img/hover.svg) 27 22, auto;
   opacity: 0.7;
 }
 
@@ -1249,7 +1249,6 @@ form button:hover {
   float: right;
   width: 30px;
   margin-top: 8px;
-  cursor: url(img/hover.svg) 27 22, auto;
 }
 
 .navigation-show {
@@ -1260,7 +1259,6 @@ form button:hover {
 }
 
 #nav {
-  cursor: url(img/hover.svg) 27 22, auto;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1489,7 +1487,6 @@ form button:hover {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: url(img/hover.svg) 27 22, auto;
   font-size: 12pt;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1503,7 +1500,6 @@ form button:hover {
 .newsletter input {
   position: absolute;
   opacity: 0;
-  cursor: url(img/hover.svg) 27 22, auto;
   height: 0;
   width: 0;
 }
