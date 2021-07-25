@@ -785,12 +785,6 @@ form button:hover {
   object-fit: cover;
 }
 
-.product-wide .img-container:hover {
-}
-
-.product .img-container:hover {
-}
-
 .product-wide .img-container:before {
   content: "";
   float: left;
@@ -1256,9 +1250,6 @@ form button:hover {
   transform: translateX(0px);
   -webkit-transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
   transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
-}
-
-#nav {
 }
 
 @media screen and (max-width: 1100px) {
