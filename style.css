@@ -37,7 +37,7 @@ html {
   position: fixed;
   width: 56px;
   height: 56px;
-  z-index: 10;
+  z-index: 9999999999;
   pointer-events: none;
   mix-blend-mode: difference;
   transition: transform 0.1s ease-in;
@@ -2300,18 +2300,18 @@ form button:hover {
   position: relative;
 }
 .cart-badge {
-  position:  absolute;
+  position: absolute;
   top: -8px;
-  right:  -8px;
+  right: -8px;
   width: 16px;
   height: 16px;
-  font-size: .8em;
+  font-size: 0.8em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
-  border:  1px solid var(--back-color);
+  border: 1px solid var(--back-color);
   color: var(--back-color);
 }
 /*# sourceMappingURL=style.css.map */
