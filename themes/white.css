@@ -17,7 +17,8 @@ nav {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
 }
 
-h1, .name, .price, .see, .marquee-scrolling, .product-more p, .join, button, .footer-link a, .copyright p {
+h1, .name, .price, .see, .marquee-scrolling, .product-more p, .join, button, .footer-link a, .copyright p,
+h2, h3, p {
   color: var(--primary-color)!important;
 }
 
@@ -35,6 +36,9 @@ input {
 
 .product-more {
   border: solid 1px rgb(252, 90, 26);
+}
+#noise {
+  background-color: var(--back-color);
 }
 .product-more p {
       color: black;
