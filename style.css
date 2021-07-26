@@ -25,7 +25,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  cursor: none;
+  cursor: none !important;
 }
 
 html {
@@ -1726,7 +1726,6 @@ form button:hover {
   color: white;
   text-align: center;
   font-weight: bold;
-  cursor: pointer;
   border: solid 2x white;
 }
 
@@ -1776,7 +1775,6 @@ form button:hover {
   color: white;
   text-align: center;
   font-weight: bold;
-  cursor: pointer;
   border: solid 2x white;
 }
 
@@ -1953,7 +1951,6 @@ form button:hover {
 
 .detail-description label {
   display: inline-block;
-  cursor: pointer;
   font-weight: bold;
   font-size: 13;
   padding: 10px 20px;
@@ -2174,7 +2171,6 @@ form button:hover {
   width: 100%;
 }
 .subscription .description .subs-button-submit {
-  cursor: pointer;
   background-color: #fc5a1a;
   color: #000;
   border: none;
@@ -2188,7 +2184,6 @@ form button:hover {
   top: 0;
   right: 0;
   margin: 24px;
-  cursor: pointer;
 }
 .subscription .closeicon {
   width: 24px;
