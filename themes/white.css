@@ -87,7 +87,10 @@ button:hover {
     filter: none;
   }
   .cart p{
-    color: white;
+    color: black;
+  }
+  .cart p span {
+    color: #fc5a1a;
   }
   .cart div{
     color: white;
