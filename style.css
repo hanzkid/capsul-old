@@ -750,7 +750,6 @@ form button:hover {
 }
 
 .justifying {
-  width: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
