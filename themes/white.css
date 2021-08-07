@@ -56,6 +56,10 @@ input {
     text-decoration: underline;
 }
 
+.add-to-cart-btn > * {
+  color:  #fff;
+}
+
 
 .marquee-container:hover .marquee-scrolling {
     color: rgba(255, 255, 255, 1)!important;
