@@ -2172,7 +2172,7 @@ form button:hover {
     margin: 0 0 32px;
   }
 }
-.subscription .description .formsubs input[type="text"] {
+.subscription .description .formsubs input[type="email"] {
   margin: 0 0 32px;
   font-size: 18px;
   border: none;
