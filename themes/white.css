@@ -56,7 +56,7 @@ input {
     text-decoration: underline;
 }
 
-.add-to-cart-btn > * {
+.add-to-cart-btn span {
   color:  #fff;
 }
 
