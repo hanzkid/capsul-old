@@ -2330,6 +2330,8 @@ form button:hover {
 }
 .shopify-challenge__container form {
   position: initial !important;
+  top: 0;
+  transform: unset;
 }
 .shopify-challenge__button.btn {
   font-family: Nexa;
