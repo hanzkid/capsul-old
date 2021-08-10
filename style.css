@@ -1161,7 +1161,7 @@ form button:hover {
 }
 
 .marginitation {
-  padding-top: 150px;
+  padding-top: 40px;
 }
 
 .overlay-navigation {
@@ -2147,7 +2147,7 @@ form button:hover {
     font-size: 2em;
   }
   .subscription .description .formsubs p {
-    font-size: .75em;
+    font-size: 0.75em;
   }
 }
 .subscription .description .formsubs {
