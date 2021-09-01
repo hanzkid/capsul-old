@@ -2360,6 +2360,7 @@ form button:hover {
   line-height: 100%;
   margin-top: 100px;
   margin-bottom: 50px;
+  font-size: 18pt;
 }
 .view_all_link:hover {
   text-decoration: underline;
