@@ -197,3 +197,7 @@ a:hover , .spotify, nav .logo, nav .right-side .theme, .marquee-container:hover,
 .custom-page * {
   color: #000;
 }
+
+.view_all_link {
+  color: black
+}
