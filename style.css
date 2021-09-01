@@ -820,6 +820,14 @@ form button:hover {
   font-family: Nexa-Bold;
 }
 
+.product-wide:hover .desc .name {
+  color: #fc5a1a;
+}
+
+.product-wide:hover .desc .price {
+  color: #fc5a1a;
+}
+
 .product-wide .desc .see {
   color: #fc5a1a;
   float: right;
