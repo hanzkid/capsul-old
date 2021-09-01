@@ -139,7 +139,7 @@ h2 {
 .accessories {
   display: inline-block;
   position: absolute;
-  left: 100px;
+  left: 30px;
 }
 
 .accessories .accessories-desc {
@@ -1193,7 +1193,7 @@ form button:hover {
 .overlay-navigation .menu {
   position: absolute;
   bottom: 50px;
-  left: 100px;
+  left: 30px;
 }
 
 .overlay-navigation .menu a {
@@ -1201,7 +1201,7 @@ form button:hover {
   color: white;
   font-family: Nexa-Bold;
   text-decoration: none;
-  font-size: 18pt;
+  font-size: 24pt;
   margin-top: 5px;
   opacity: 0.5;
 }
@@ -2369,7 +2369,7 @@ form button:hover {
   line-height: 100%;
   margin-top: 100px;
   margin-bottom: 50px;
-  font-size: 18pt;
+  font-size: 14pt;
 }
 .view_all_link:hover {
   text-decoration: underline;
