@@ -1167,7 +1167,7 @@ form button:hover {
 .overlay-navigation {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 440px;
   height: 100vh;
   -webkit-box-sizing: border-box;
