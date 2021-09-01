@@ -19,7 +19,7 @@ nav {
 
 h1, .name, .price, .see, .marquee-scrolling, .product-more p, .join, button, .footer-link a, .copyright p,
 h2, h3, p, strong, span {
-  color: var(--primary-color);
+  color: var(--primary-color)!important;
 }
 
 h1::before {
