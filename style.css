@@ -716,7 +716,7 @@ form button:hover {
 
 .product .desc {
   padding-bottom: 10px;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+/*   border-bottom: solid 1px rgba(255, 255, 255, 0.2); */
 }
 
 .product .desc .name {
@@ -799,7 +799,7 @@ form button:hover {
 
 .product-wide .desc {
   padding-bottom: 10px;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+/*   border-bottom: solid 1px rgba(255, 255, 255, 0.2); */
 }
 
 .product-wide .desc .name {
