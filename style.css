@@ -1192,8 +1192,9 @@ form button:hover {
 
 .overlay-navigation .menu {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50px;
+  transform: translateY(-50%);
 }
 
 .overlay-navigation .menu a {
