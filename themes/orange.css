@@ -194,9 +194,9 @@ a:hover , .spotify, nav .logo, nav .right-side .theme, .marquee-container:hover,
 
 
 .product-wide:hover .desc .name {
-  color: #ffffff;
+  color: #ffffff!important;
 }
 
 .product-wide:hover .desc .price {
-  color: #ffffff;
+  color: #ffffff!important;
 }
