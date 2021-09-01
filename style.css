@@ -2357,6 +2357,7 @@ form button:hover {
 .view_all_link {
   color: white;
   text-decoration : none;
+  line-height: 100%;
 }
 .view_all_link:hover {
   text-decoration: underline;
