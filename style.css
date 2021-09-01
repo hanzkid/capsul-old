@@ -139,7 +139,7 @@ h2 {
 .accessories {
   display: inline-block;
   position: absolute;
-  left: 30px;
+  left: 50px;
 }
 
 .accessories .accessories-desc {
@@ -1192,8 +1192,8 @@ form button:hover {
 
 .overlay-navigation .menu {
   position: absolute;
-  bottom: 50px;
-  left: 30px;
+  top: 30%;
+  left: 50px;
 }
 
 .overlay-navigation .menu a {
