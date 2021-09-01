@@ -2358,6 +2358,8 @@ form button:hover {
   color: white;
   text-decoration : none;
   line-height: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 .view_all_link:hover {
   text-decoration: underline;
