@@ -2370,6 +2370,7 @@ form button:hover {
   margin-top: 100px;
   margin-bottom: 50px;
   font-size: 14pt;
+  white-space: nowrap;
 }
 .view_all_link:hover {
   text-decoration: underline;
