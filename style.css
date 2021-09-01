@@ -2352,4 +2352,13 @@ form button:hover {
   color: #ffffff;
   mix-blend-mode: difference;
 }
+
+
+.view_all_link {
+  color: white;
+  text-decoration : none;
+}
+.view_all_link:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=style.css.map */
