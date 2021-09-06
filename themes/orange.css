@@ -201,9 +201,6 @@ a:hover , .spotify, nav .logo, nav .right-side .theme, .marquee-container:hover,
   color: #ffffff!important;
 }
 
-#myVideo {
-  background-color: white;
-}
-.opacity5 {
-  background: white;
+.overlaybelakangvideo {
+  opacity: 1;
 }
